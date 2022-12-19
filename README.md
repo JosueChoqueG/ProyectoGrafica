@@ -1,7 +1,6 @@
                # Proyecto Computacion Grafica
                # Juego 2D "ATRAPANDO HUEVOS"
-
-
+               
 # INTEGRANTES
 # Josue Choque Gomez
 # Ruth Valcarcel Sierra
