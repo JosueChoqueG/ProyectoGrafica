@@ -1,1 +1,2 @@
-# ProyectoGrafica
+# Proyecto Computacion Grafica
+jfjf
