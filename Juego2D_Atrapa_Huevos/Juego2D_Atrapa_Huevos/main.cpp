@@ -200,3 +200,18 @@ void line(int i , int j)
 	glEnd();
 	glFlush();
 }
+void backk(int i , int j)
+{
+	
+	
+	glColor3f(0, .5, 1);
+	glBegin(GL_QUADS);
+	glVertex2f(0.0+i,0.0+j);
+	glVertex2f(600.0+i, 0.0+j);
+	glVertex2f(600.0+i,-500+j);
+	glVertex2f(0.0+i,-500+j);
+	glEnd();
+	glFlush();
+	
+	
+}
