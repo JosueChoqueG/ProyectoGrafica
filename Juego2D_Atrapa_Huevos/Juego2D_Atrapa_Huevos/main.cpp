@@ -425,3 +425,14 @@ if(egg_yc<=10)
 		   egg_yc-=speed_1;
 		score();
 	}
+else
+	   start_screen(40,300);
+	glFlush();
+	glutSwapBuffers();
+}
+void basket_set(int a,int b)
+{
+	basket_x=a;
+	basket_y=b;
+	glutPostRedisplay();
+}
