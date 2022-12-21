@@ -346,3 +346,15 @@ void score()
 	}
 	missed_eggs=dropped_eggs-eggs_caught;
 }
+void display(void)
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+	ground(0 , 650);
+	backk(0, 650);
+	duck(40,375);
+	duck(180,375);
+	duck(320,375);
+	sun();
+	cloud1();
+	cloud2();
+	line(0,375);
