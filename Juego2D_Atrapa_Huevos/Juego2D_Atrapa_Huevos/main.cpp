@@ -187,3 +187,16 @@ void cloud2()
 	glFlush();
 	
 }
+
+void line(int i , int j)
+{
+	
+	glBegin(GL_QUADS);
+	glColor3f(1.0,.5,0.5);
+	glVertex2f(0.0+i,10.0+j);
+	glVertex2f(0.0+i,15.0+j);
+	glVertex2f(600.0+i,15.0+j);
+	glVertex2f(600.0+i,10.0+j);
+	glEnd();
+	glFlush();
+}
