@@ -250,3 +250,15 @@ void egg()
 	}
 	glEnd();
 }
+void basket(int i,int j)
+{
+	j=10;
+	if(i>=a-60)i=a-60;
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_QUADS);
+	glVertex2f(0.0+i,30.0+j);
+	glVertex2f(10.0+i,10.0+j);
+	glVertex2f(50.0+i,10.0+j);
+	glVertex2f(60.0+i,30.0+j);
+	glEnd();
+}
