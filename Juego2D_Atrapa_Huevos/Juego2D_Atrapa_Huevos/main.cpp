@@ -136,4 +136,129 @@ void cloud1()
 	
 	glEnd();
 	glFlush();
+} 
+
+void cloud2()
+{
+	float theta;
+	glLineWidth(1.5);
+	glColor3f(1,1,1);
+	glBegin(GL_POLYGON);
+	for (int i = 0; i <360 ; i++)
+	{
+		theta  = i*PI*i/180;
+		glVertex2f(420+45*cos(theta)/2, 540+45*sin(theta)/2);
+	}
+	
+	glEnd();
+	
+	glLineWidth(1.5);
+	glColor3f(1,1,1);
+	glBegin(GL_POLYGON);
+	for (int i = 0; i <360 ; i++)
+	{
+		theta  = i*PI*i/180;
+		glVertex2f(455+45*cos(theta)/2, 550+45*sin(theta)/2);
+	}
+	
+	glEnd();
+	
+	glLineWidth(1.5);
+	glColor3f(1,1,1);
+	glBegin(GL_POLYGON);
+	for (int i = 0; i <360 ; i++)
+	{
+		theta  = i*PI*i/180;
+		glVertex2f(455+45*cos(theta)/2, 530+45*sin(theta)/2);
+	}
+	
+	glEnd();
+	
+	glLineWidth(1.5);
+	glColor3f(1,1,1);
+	glBegin(GL_POLYGON);
+	for (int i = 0; i <360 ; i++)
+	{
+		theta  = i*PI*i/180;
+		glVertex2f(490+45*cos(theta)/2, 540+45*sin(theta)/2);
+	}
+	
+	glEnd();
+	glFlush();
+	
+}
+
+void line(int i , int j)
+{
+	
+	glBegin(GL_QUADS);
+	glColor3f(1.0,.5,0.5);
+	glVertex2f(0.0+i,10.0+j);
+	glVertex2f(0.0+i,15.0+j);
+	glVertex2f(600.0+i,15.0+j);
+	glVertex2f(600.0+i,10.0+j);
+	glEnd();
+	glFlush();
+}
+void backk(int i , int j)
+{
+	
+	
+	glColor3f(0, .5, 1);
+	glBegin(GL_QUADS);
+	glVertex2f(0.0+i,0.0+j);
+	glVertex2f(600.0+i, 0.0+j);
+	glVertex2f(600.0+i,-500+j);
+	glVertex2f(0.0+i,-500+j);
+	glEnd();
+	glFlush();
+	
+	
+}
+void ground(int i , int j)
+{
+	
+	glBegin(GL_QUADS);
+	glColor3f(0,1.0,0);
+	glVertex2f(0.0+i,0.0+j);
+	glVertex2f(600.0+i, 0.0+j);
+	glVertex2f(600.0+i,-j);
+	glVertex2f(0.0+i,-j);
+	glEnd();
+}
+
+
+
+
+
+
+
+
+void egg()
+{
+	
+	float x,y,z;
+	int t;
+	glColor3f(1.0,10,1.0);
+	glBegin(GL_POLYGON);
+	for(t=0;t<=360;t+=1)
+	{
+		x = egg_xc+8*(cos(t));
+		y = egg_yc+16*(sin(t));
+		z = 0;
+		glVertex3f(x,y,z);
+	}
+	glEnd();
+}
+void basket(int i,int j)
+{
+	j=10;
+	if(i>=a-60)i=a-60;
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_QUADS);
+	glVertex2f(0.0+i,30.0+j);
+	glVertex2f(10.0+i,10.0+j);
+	glVertex2f(50.0+i,10.0+j);
+	glVertex2f(60.0+i,30.0+j);
+	glEnd();
 }
