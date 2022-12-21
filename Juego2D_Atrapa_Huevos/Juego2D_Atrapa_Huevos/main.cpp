@@ -482,3 +482,14 @@ void menu(int id)
 	}
 	glutPostRedisplay();
 }
+int main(int argc,char **argv)
+{
+    printf("******************************************************************");
+    printf("\n\t\t\t\t JUEGO DE HUEVOS\n\n");
+    printf("******************************************************************");
+    printf("\n\tCómo jugar..?\n\n <1>El objetivo del juego es atrapar los huevos en la cesta o canasta..\n\t Para mover la cesta o canasta usa el mouse.\n");
+    printf("\n <2> Para comenzar, presione la tecla 's' ó 'S' ó \n\tHaga clic en el botón derecho del mouse y luego haga clic en 'Iniciar juego'.\n");
+    printf("\n <3> Para salir manualmente, presione la tecla 'q' ó 'Q' ó\n\t Haga clic con el botón derecho del mouse y luego haga clic en 'Salir'.\n");
+    printf("\n\n REGLAS: Si el jugador pierde 10 huevos, entonces 'Finaliza el juego'.\n");
+    printf("\nPara cada nivel, la velocidad aumenta\n\n");
+    printf("\n\nBUENA SUERTE\n");
