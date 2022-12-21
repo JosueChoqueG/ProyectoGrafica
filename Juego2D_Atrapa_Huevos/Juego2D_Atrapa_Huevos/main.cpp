@@ -227,13 +227,6 @@ void ground(int i , int j)
 	glEnd();
 }
 
-
-
-
-
-
-
-
 void egg()
 {
 	
@@ -262,3 +255,19 @@ void basket(int i,int j)
 	glVertex2f(60.0+i,30.0+j);
 	glEnd();
 }
+void duck(int i,int j)
+{
+	int h;
+	glColor3f(1.0,1.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(45+i,45+j);
+	glVertex2f(70+i,20+j);
+	glVertex2f(95+i,20+j);
+	glVertex2f(120+i,45+j);
+	glVertex2f(95+i,70+j);
+	glVertex2f(70+i,70+j);
+	glVertex2f(95+i,95+j);
+	glVertex2f(82.5+i,107.5+j);
+	glVertex2f(32.5+i,57.5+j);
+	glEnd();
+	glFlush();
