@@ -313,3 +313,26 @@ void print_score()
 	getchar();
 	exit(0);
 }
+void egg_start()
+{
+	egg_yc=375;
+	if(missed_eggs>=10)
+	{
+		printf("\n\n\t\t\t\tJUEGO TERMINADO\n\n");
+		print_score();
+	}
+	dropped_eggs++;
+	
+	switch(rand()%9)
+	{
+	case 0:egg_xc=115; break;
+	case 1:egg_xc=255; break;
+	case 2:egg_xc=390; break;
+	case 5:egg_xc=115; break;
+	case 3:egg_xc=255; break;
+	case 4:egg_xc=390; break;
+	case 7:egg_xc=115; break;
+	case 6:egg_xc=255; break;
+	case 8:egg_xc=390; break;
+	}
+}
