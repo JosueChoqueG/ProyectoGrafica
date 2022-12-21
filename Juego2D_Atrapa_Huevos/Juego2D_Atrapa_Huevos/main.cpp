@@ -227,13 +227,6 @@ void ground(int i , int j)
 	glEnd();
 }
 
-
-
-
-
-
-
-
 void egg()
 {
 	
@@ -262,3 +255,113 @@ void basket(int i,int j)
 	glVertex2f(60.0+i,30.0+j);
 	glEnd();
 }
+void duck(int i,int j)
+{
+	int h;
+	glColor3f(1.0,1.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(45+i,45+j);
+	glVertex2f(70+i,20+j);
+	glVertex2f(95+i,20+j);
+	glVertex2f(120+i,45+j);
+	glVertex2f(95+i,70+j);
+	glVertex2f(70+i,70+j);
+	glVertex2f(95+i,95+j);
+	glVertex2f(82.5+i,107.5+j);
+	glVertex2f(32.5+i,57.5+j);
+	glEnd();
+	glFlush();
+	for(h=0;h<13;h+=4)
+	{
+		glBegin(GL_LINES);
+		glColor3f(0.7,0.4,0);
+		glVertex2f(57.5+h+i,52.5+h+j);
+		glVertex2f(100+h+i,30+h+j);
+		glEnd();
+		glFlush();
+	}
+	glColor3f(0.0,1.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(82.5+i,107.5+j);
+	glVertex2f(65+i,107.5+j);
+	glVertex2f(50+i,95+j);
+	glVertex2f(70+i,95+j);
+	glEnd();
+	glFlush();
+	glColor3f(0.0,0.0,0.0);
+	glPointSize(5);
+	glBegin(GL_POINTS);
+	glVertex2f(76+i,101+j);
+	glEnd();
+	glColor3f(0.0,1.0,0.0);
+	glBegin(GL_LINE_LOOP);
+	glVertex2f(72.5+i,107.5+j);
+	glVertex2f(67.5+i,112.5+j);
+	glVertex2f(72.5+i,110+j);
+	glVertex2f(77.5+i,112.5+j);
+	glEnd();
+	glFlush();
+}
+
+void print_score()
+{
+	printf("\nNivel alcanzado: %d\n\n",level_count);
+	printf("\nNo. de huevos caídos= %d \n",dropped_eggs);
+	printf("\nNo. de huevos atrapados = %d\n",eggs_caught);
+	printf("\nNo. de huevos perdidos = %d\n",missed_eggs);
+	
+	getchar();
+	exit(0);
+}
+void egg_start()
+{
+	egg_yc=375;
+	if(missed_eggs>=10)
+	{
+		printf("\n\n\t\t\t\tJUEGO TERMINADO\n\n");
+		print_score();
+	}
+	dropped_eggs++;
+	
+	switch(rand()%9)
+	{
+	case 0:egg_xc=115; break;
+	case 1:egg_xc=255; break;
+	case 2:egg_xc=390; break;
+	case 5:egg_xc=115; break;
+	case 3:egg_xc=255; break;
+	case 4:egg_xc=390; break;
+	case 7:egg_xc=115; break;
+	case 6:egg_xc=255; break;
+	case 8:egg_xc=390; break;
+	}
+}
+void score()
+{
+	if(egg_yc<=50 && (egg_xc>=basket_x&&egg_xc<=basket_x+60))
+	{
+		printf("\a");
+		eggs_caught++;
+		egg_yc=-10;
+	}
+	missed_eggs=dropped_eggs-eggs_caught;
+}
+void display(void)
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+	ground(0 , 650);
+	backk(0, 650);
+	duck(40,375);
+	duck(180,375);
+	duck(320,375);
+	sun();
+	cloud1();
+	cloud2();
+	line(0,375);
+	
+	int i;
+	char z[12]="Grupo 8";
+	char level1[12]="NIVEL 1";
+	char level2[12]="NIVEL 2";
+	char level3[12]="NIVEL 3";
+	char level4[12]="NIVEL 4";
