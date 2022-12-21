@@ -401,3 +401,27 @@ else if(level_count==3)
 			for(i=0;i<12;i++)
 				glutBitmapCharacter(GLUT_BITMAP_8_BY_13,level4[i]);
 		}
+if(egg_yc<=10)
+		   egg_start();
+		
+		egg();
+		basket(basket_x,basket_y);
+		if(eggs_caught>=10)
+		{
+			egg_yc-=speed_2;
+			level_count=2;
+		}
+		if(eggs_caught>=20)
+		{
+			egg_yc-=speed_3;
+			level_count=3;
+		}
+		if(eggs_caught>=30)
+		{
+			egg_yc-=speed_4;
+			level_count=4;
+		}
+		else
+		   egg_yc-=speed_1;
+		score();
+	}
