@@ -215,3 +215,18 @@ void backk(int i , int j)
 	
 	
 }
+void ground(int i , int j)
+{
+	
+	glBegin(GL_QUADS);
+	glColor3f(0,1.0,0);
+	glVertex2f(0.0+i,0.0+j);
+	glVertex2f(600.0+i, 0.0+j);
+	glVertex2f(600.0+i,-j);
+	glVertex2f(0.0+i,-j);
+	glEnd();
+}
+
+
+
+
