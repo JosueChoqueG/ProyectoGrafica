@@ -336,3 +336,13 @@ void egg_start()
 	case 8:egg_xc=390; break;
 	}
 }
+void score()
+{
+	if(egg_yc<=50 && (egg_xc>=basket_x&&egg_xc<=basket_x+60))
+	{
+		printf("\a");
+		eggs_caught++;
+		egg_yc=-10;
+	}
+	missed_eggs=dropped_eggs-eggs_caught;
+}
