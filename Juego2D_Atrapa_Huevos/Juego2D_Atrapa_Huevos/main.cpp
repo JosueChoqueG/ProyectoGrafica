@@ -230,3 +230,23 @@ void ground(int i , int j)
 
 
 
+
+
+
+
+void egg()
+{
+	
+	float x,y,z;
+	int t;
+	glColor3f(1.0,10,1.0);
+	glBegin(GL_POLYGON);
+	for(t=0;t<=360;t+=1)
+	{
+		x = egg_xc+8*(cos(t));
+		y = egg_yc+16*(sin(t));
+		z = 0;
+		glVertex3f(x,y,z);
+	}
+	glEnd();
+}
