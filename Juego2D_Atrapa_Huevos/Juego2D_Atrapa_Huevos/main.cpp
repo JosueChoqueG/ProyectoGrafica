@@ -77,7 +77,7 @@ void sun()
 	
 	GLfloat angle;
 	glLineWidth(1.5);
-	glColor3f(1,0.2,0);
+	glColor3f(0,0,255);
 	glBegin(GL_POLYGON);
 	for (int i = 0; i <360 ; i++)
 	{
