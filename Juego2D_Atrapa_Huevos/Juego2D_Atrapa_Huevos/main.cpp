@@ -358,3 +358,10 @@ void display(void)
 	cloud1();
 	cloud2();
 	line(0,375);
+	
+	int i;
+	char z[12]="Grupo 8";
+	char level1[12]="NIVEL 1";
+	char level2[12]="NIVEL 2";
+	char level3[12]="NIVEL 3";
+	char level4[12]="NIVEL 4";
