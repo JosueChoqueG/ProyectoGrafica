@@ -69,3 +69,22 @@ void start_screen(int i,int j)
 	glColor3f(1,.5,.5);
 	
 }
+
+void sun()
+{
+	
+	float theta;
+	
+	GLfloat angle;
+	glLineWidth(1.5);
+	glColor3f(1,0.2,0);
+	glBegin(GL_POLYGON);
+	for (int i = 0; i <360 ; i++)
+	{
+		theta  = i*PI*i/180;
+		glVertex2f(500+80*cos(theta)/2, 600+80*sin(theta)/2);
+	}
+	
+	glEnd();
+	glFlush();
+}
