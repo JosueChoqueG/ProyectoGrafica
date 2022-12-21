@@ -365,3 +365,39 @@ void display(void)
 	char level2[12]="NIVEL 2";
 	char level3[12]="NIVEL 3";
 	char level4[12]="NIVEL 4";
+if(s>=1)
+	{
+		glColor3f(0,0,1);
+		
+		glRasterPos2i(10,10);
+		for(i=0;i<12;i++)
+			glutBitmapCharacter(GLUT_BITMAP_8_BY_13,z[i]);
+		
+		if(level_count==1)
+		{
+			glColor3f(1,1,1);
+			glRasterPos2i(500,300);
+			for(i=0;i<12;i++)
+				glutBitmapCharacter(GLUT_BITMAP_8_BY_13,level1[i]);
+		}
+		else if(level_count==2)
+		{
+			glColor3f(1,0,0);
+			glRasterPos2i(500,300);
+			for(i=0;i<12;i++)
+				glutBitmapCharacter(GLUT_BITMAP_8_BY_13,level2[i]);
+		}
+else if(level_count==3)
+		{
+			glColor3f(0,1,1);
+			glRasterPos2i(500,300);
+			for(i=0;i<12;i++)
+				glutBitmapCharacter(GLUT_BITMAP_8_BY_13,level3[i]);
+		}
+		if(level_count==4)
+		{
+			glColor3f(1,0,1);
+			glRasterPos2i(500,300);
+			for(i=0;i<12;i++)
+				glutBitmapCharacter(GLUT_BITMAP_8_BY_13,level4[i]);
+		}
