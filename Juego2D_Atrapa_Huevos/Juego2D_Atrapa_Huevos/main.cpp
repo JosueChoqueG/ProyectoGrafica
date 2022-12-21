@@ -493,3 +493,21 @@ int main(int argc,char **argv)
     printf("\n\n REGLAS: Si el jugador pierde 10 huevos, entonces 'Finaliza el juego'.\n");
     printf("\nPara cada nivel, la velocidad aumenta\n\n");
     printf("\n\nBUENA SUERTE\n");
+glutInit(&argc,argv);
+    glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB);
+    glutInitWindowSize(a,b);
+    glutCreateWindow("JUEGO DE HUEVOS");
+    myinit();
+    glutInitWindowPosition (100, 100);
+    glutCreateMenu(menu);
+    glutAddMenuEntry("Iniciar juego",1);
+    glutAddMenuEntry("Puntaje",2);
+    glutAddMenuEntry("Abandonar",3);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+    glutDisplayFunc(display);
+    glutKeyboardFunc(keys);
+    glutPassiveMotionFunc(basket_set);
+    glutIdleFunc(display);
+    glutReshapeFunc(myReshape);
+    glutMainLoop();
+}
