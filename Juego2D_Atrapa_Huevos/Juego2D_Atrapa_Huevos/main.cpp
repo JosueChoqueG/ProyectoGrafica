@@ -34,3 +34,38 @@ void basket_set(int,int);
 void myReshape(int,int);
 void keys(unsigned char,int,int);
 void menu(int);
+void myinit()
+{
+	glViewport(0,0,a,b);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0,(GLdouble)a,0,(GLdouble)b);
+	glMatrixMode(GL_MODELVIEW);
+	glutPostRedisplay();
+}
+void start_screen(int i,int j)
+{
+	int k;
+	char cat[9]="Juego";
+	char orr[11]="Atrapando";
+	char hatch[7]="Huevos";
+	char start[30]="Presiona 'S' para comenzar";
+	glColor3f(0,1,0);
+	glRasterPos2i(130,320);
+	for(k=0;k<9;k++)
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,cat[k]);
+	glColor3f(1,1,1);
+	glRasterPos2i(200,320);
+	for(k=0;k<9;k++)
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,orr[k]);
+	glColor3f(1,0,0);
+	glRasterPos2i(300,320);
+	for(k=0;k<7;k++)
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,hatch[k]);
+	glColor3f(1,1,0);
+	glRasterPos2i(210,200);
+	for(k=0;k<30;k++)
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,start[k]);
+	glColor3f(1,.5,.5);
+	
+}
