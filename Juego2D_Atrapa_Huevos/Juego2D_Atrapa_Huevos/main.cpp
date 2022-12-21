@@ -436,3 +436,14 @@ void basket_set(int a,int b)
 	basket_y=b;
 	glutPostRedisplay();
 }
+void myReshape(int w,int h)
+{
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0.0,(GLdouble)w,0.0,(GLdouble)h);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glViewport(0,0,w,h);
+	a=w;
+	b=h;
+}
