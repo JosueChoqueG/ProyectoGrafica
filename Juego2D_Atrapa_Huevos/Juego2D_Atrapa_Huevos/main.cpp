@@ -468,3 +468,17 @@ void keys(unsigned char key,int x,int y)
 	}
 	
 }
+void menu(int id)
+{
+	switch(id)
+	{
+	case 1: s+=1;
+	break;
+	case 2:print_score();
+	break;
+	case 3: printf("\n\n\n\t\tSALIR POR JUGADOR\n");
+	break;
+	default:exit(0);
+	}
+	glutPostRedisplay();
+}
