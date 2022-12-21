@@ -302,3 +302,14 @@ void duck(int i,int j)
 	glEnd();
 	glFlush();
 }
+
+void print_score()
+{
+	printf("\nNivel alcanzado: %d\n\n",level_count);
+	printf("\nNo. de huevos caídos= %d \n",dropped_eggs);
+	printf("\nNo. de huevos atrapados = %d\n",eggs_caught);
+	printf("\nNo. de huevos perdidos = %d\n",missed_eggs);
+	
+	getchar();
+	exit(0);
+}
